@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/distributorsFragment"
+        android:name="com.example.taskat.core.ui.fragment.distributor.distributors.DistributorsFragment"
+        android:label="@string/distributors"
+        tools:layout="@layout/fragment_distributors" >
+        <action
+            android:id="@+id/action_distributorsFragment_to_newDistributorFragment"
+            app:destination="@id/newDistributorFragment" />
+        <action
+            android:id="@+id/action_distributorsFragment_to_addNewTaskFragment"
+            app:destination="@id/addNewTaskFragment" />
+        <argument
+            android:name="whereFrom"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDistributorFragment"
+        android:name="com.example.taskat.core.ui.fragment.distributor.newdistributor.NewDistributorFragment"
+        android:label="@string/add_new_distributor"
+        tools:layout="@layout/fragment_new_disributor" >
+        <action
+            android:id="@+id/action_newDistributorFragment_to_distributorsFragment"
+            app:destination="@id/distributorsFragment" />
+        <action
+            android:id="@+id/action_newDistributorFragment_to_addNewTaskFragment"
+            app:destination="@id/addNewTaskFragment" />
+        <argument
+            android:name="whereFrom"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewTaskFragment"
+        android:name="com.example.taskat.core.ui.fragment.task.newtask.AddNewTaskFragment"
+        android:label="@string/add_new_task"
+        tools:layout="@layout/fragment_add_new_task" >
+        <action
+            android:id="@+id/action_addNewTaskFragment_to_distributorsFragment"
+            app:destination="@id/distributorsFragment" />
+        <argument
+            android:name="distributorID"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="distributorName"
+            app:argType="string"
+            android:defaultValue=" " />
+        <action
+            android:id="@+id/action_addNewTaskFragment_to_specialistsFragment"
+            app:destination="@id/specialistsFragment" />
+        <argument
+            android:name="specialistID"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="specialistName"
+            app:argType="string"
+            android:defaultValue=" " />
+        <action
+            android:id="@+id/action_addNewTaskFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/specializationsFragment"
+        android:name="com.example.taskat.core.ui.fragment.specializations.SpecializationsFragment"
+        android:label="@string/specializations"
+        tools:layout="@layout/fragment_specializtions" >
+        <action
+            android:id="@+id/action_specializationsFragment_to_selectSpecializationsFragment"
+            app:destination="@id/selectSpecializationsFragment" />
+        <argument
+            android:name="from"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/specialistFragment"
+        android:name="com.example.taskat.core.ui.fragment.specialist.newspecialist.AddSpecialistFragment"
+        android:label="@string/add_new_specialist"
+        tools:layout="@layout/fragment_specialist" >
+        <action
+            android:id="@+id/action_specialistFragment_to_selectSpecializationsFragment"
+            app:destination="@id/selectSpecializationsFragment" />
+        <argument
+            android:name="specialist"
+            app:argType="com.example.taskat.domain.model.Specialist"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="whereFrom"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_specialistFragment_to_specialistsFragment"
+            app:destination="@id/specialistsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectSpecializationsFragment"
+        android:name="com.example.taskat.core.ui.fragment.specialist.selectspecilizations.SelectSpecializationsFragment"
+        android:label="@string/select_specializations"
+        tools:layout="@layout/fragment_select_specilzations" >
+        <action
+            android:id="@+id/action_selectSpecializationsFragment_to_specializationsFragment"
+            app:destination="@id/specializationsFragment" />
+        <argument
+            android:name="specialistID"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="whereFrom"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_selectSpecializationsFragment_to_specialistsFragment"
+            app:destination="@id/specialistsFragment" />
+        <action
+            android:id="@+id/action_selectSpecializationsFragment_to_addNewTaskFragment"
+            app:destination="@id/addNewTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/specialistsFragment"
+        android:name="com.example.taskat.core.ui.fragment.specialist.specialists.SpecialistsFragment"
+        android:label="@string/specialists"
+        tools:layout="@layout/fragment_specialists" >
+        <action
+            android:id="@+id/action_specialistsFragment_to_specialistFragment"
+            app:destination="@id/specialistFragment" />
+        <action
+            android:id="@+id/action_specialistsFragment_to_selectSpecializationsFragment"
+            app:destination="@id/selectSpecializationsFragment" />
+        <argument
+            android:name="whereFrom"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_specialistsFragment_to_addNewTaskFragment"
+            app:destination="@id/addNewTaskFragment" />
+        <action
+            android:id="@+id/action_specialistsFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+        <argument
+            android:name="taskID"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.example.taskat.core.ui.fragment.task.tasks.TasksFragment"
+        android:label="@string/tasks"
+        tools:layout="@layout/fragment_tasks" >
+        <action
+            android:id="@+id/action_tasksFragment_to_specialistsFragment"
+            app:destination="@id/specialistsFragment" />
+        <action
+            android:id="@+id/action_tasksFragment_to_addNewTaskFragment"
+            app:destination="@id/addNewTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.taskat.core.ui.fragment.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

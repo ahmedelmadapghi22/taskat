@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="@dimen/_3sdp"
+    app:cardMaxElevation="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/_3sdp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCurrencyName"
+            style="@style/TitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/_18ssp"
+            android:text="v.s"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tvCurrencyTotalMoney"
+            style="@style/TitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="400 v.s"
+            android:textStyle="normal"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

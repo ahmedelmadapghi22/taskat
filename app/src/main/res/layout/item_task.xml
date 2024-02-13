@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_2sdp"
+    app:cardCornerRadius="@dimen/_2sdp"
+    app:cardMaxElevation="@dimen/_5sdp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true"
+    app:cardElevation="@dimen/_10sdp"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tvTaskState"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskState" />
+
+        <TextView
+            android:id="@+id/tvTaskDateTitle"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskDate"
+            style="@style/TaskTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskDistributorTitle"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/distributor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskDateTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskDistributor"
+            style="@style/TaskTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskDateTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskSpecialistTitle"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/specialist"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskDistributorTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskSpecialist"
+            style="@style/TaskTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskDistributorTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskIncomeTitle"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_distributor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskSpecialistTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskIncome"
+            style="@style/TaskTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskSpecialistTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskCurrencyIncome"
+            style="@style/TaskTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/tvTaskIncome"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskSpecialistTitle" />
+        <TextView
+            android:id="@+id/tvTaskOutcomeTitle"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_deliverer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskIncomeTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskOutcome"
+            style="@style/TaskTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskIncomeTitle" />
+
+        <TextView
+            android:id="@+id/tvTaskCurrencyOutcome"
+            style="@style/TaskTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/tvTaskOutcome"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskIncomeTitle" />
+
+        <TextView
+            android:id="@+id/tvIsDistributorAccounted"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/is_distributor_accounted"
+            app:layout_constraintBottom_toBottomOf="@+id/cbIsDistributorAccounted"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cbIsDistributorAccounted" />
+        <CheckBox
+            android:id="@+id/cbIsDistributorAccounted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTaskOutcome" />
+
+        <TextView
+            android:id="@+id/tvIsSpecialistAccounted"
+            style="@style/TitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/is_specialist_accounted"
+            app:layout_constraintBottom_toBottomOf="@+id/cbIsSpecialistAccounted"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbIsDistributorAccounted" />
+
+        <CheckBox
+            android:id="@+id/cbIsSpecialistAccounted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbIsDistributorAccounted" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

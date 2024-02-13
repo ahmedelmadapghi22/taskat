@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".core.ui.fragment.specializations.SpecializationsFragment">
+
+    <include
+        android:id="@+id/searchLayout"
+        layout="@layout/search_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edSpecializationName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:background="@drawable/date_background"
+        android:hint="@string/hint_name_of_specialization"
+        android:inputType="text"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddNewSpecializations"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddNewSpecializations"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnAddNewSpecializations" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddNewSpecializations"
+        style="@style/AppCompatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:text="@string/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchLayout" />
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/specializations_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        app:layout_constraintTop_toBottomOf="@+id/btnAddNewSpecializations" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSpecializations"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <include
+        android:id="@+id/loadingLayout"
+        layout="@layout/loading_layout"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddNewSpecializations" />
+
+    <include
+        android:id="@+id/emptyLayout"
+        layout="@layout/empty_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddNewSpecializations" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

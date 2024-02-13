@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_2sdp"
+    app:cardUseCompatPadding="true"
+    app:cardMaxElevation="@dimen/_5sdp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_2sdp"
+
+        >
+
+        <TextView
+            android:id="@+id/tvNameSpecialist"
+            style="@style/TitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ahmed elmadpghi"
+            android:textSize="@dimen/_25ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="0.1"
+            android:clickable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoteSpecialist" />
+
+        <TextView
+            android:id="@+id/tvNoteSpecialist"
+            style="@style/ContentTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameSpecialist"
+            android:text="dsasdasdassdasdasdsad"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tvPhoneSpecialist"
+            style="@style/ContentTextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:layout_margin="0dp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:text="01204831413"
+            app:layout_constraintBottom_toBottomOf="@+id/btnWhatsapp"
+            app:layout_constraintEnd_toStartOf="@+id/btnWhatsapp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnWhatsapp" />
+
+        <ImageButton
+            android:id="@+id/btnWhatsapp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_whatsapp"
+            app:layout_constraintEnd_toStartOf="@+id/btnDeleteSpecialist"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+        <ImageButton
+            android:id="@+id/btnDeleteSpecialist"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnEditSpecialist"
+
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+        <ImageButton
+            android:id="@+id/btnEditSpecialist"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_edit"
+
+            app:layout_constraintEnd_toStartOf="@+id/btnGoToSpecializations"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+        <ImageButton
+            android:id="@+id/btnGoToSpecializations"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_specialization"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

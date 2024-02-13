@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/date_background"
+    android:padding="@dimen/_5sdp"
+  >
+
+    <TextView
+        android:id="@+id/tvReceiverPriceTitle"
+        style="@style/TitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/price_distributor"
+        app:layout_constraintEnd_toStartOf="@+id/tvPercentTitle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPercentTitle"
+        style="@style/TitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/percent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvReceiverPriceTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDelivererPriceTitle"
+        style="@style/TitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/price_deliverer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distributorPriceLayout" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/distributorPriceLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:hint="@string/hint_price"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@+id/btnChooseIncomeCurrency"
+        app:layout_constraintStart_toStartOf="@+id/tvReceiverPriceTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvReceiverPriceTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edDistributorPrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/btnChooseIncomeCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_currency"
+        app:layout_constraintBottom_toBottomOf="@+id/distributorPriceLayout"
+        app:layout_constraintEnd_toEndOf="@+id/tvReceiverPriceTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvReceiverPriceTitle"
+        android:layout_marginEnd="@dimen/_10sdp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/percentLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:hint="@string/percent"
+        app:layout_constraintEnd_toEndOf="@+id/tvPercentTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvPercentTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvReceiverPriceTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edMyPercent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="number"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/delivererPriceLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_price"
+        app:layout_constraintEnd_toStartOf="@+id/btnChooseOutcomeCurrency"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDelivererPriceTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edSpecialistPrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/btnChooseOutcomeCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_currency"
+        app:layout_constraintBottom_toBottomOf="@+id/delivererPriceLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/delivererPriceLayout" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

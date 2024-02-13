@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    >
+    <TextView
+        android:id="@+id/tvNoSpecializations"
+        style="@style/ContentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="1"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteSpecialization"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDeleteSpecialization"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:textDirection="locale"
+        android:layout_weight="0.4"
+
+        />
+    <TextView
+        android:id="@+id/tvNameSpecializations"
+        style="@style/ContentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="برمجة"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteSpecialization"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDeleteSpecialization"
+        android:gravity="center"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:textDirection="locale"
+        android:layout_weight="0.4"
+
+        />
+
+
+    <ImageButton
+        android:id="@+id/btnDeleteSpecialization"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_weight="0.2"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>

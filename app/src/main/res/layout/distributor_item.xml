@@ -1,0 +1,54 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvNameDistributor"
+        style="@style/TitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        app:layout_constraintEnd_toStartOf="@+id/btnWhatsapp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPhoneDistributor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:layout_marginStart="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameDistributor"
+        app:layout_constraintStart_toStartOf="@+id/tvNameDistributor"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameDistributor" />
+
+    <ImageButton
+        android:id="@+id/btnWhatsapp"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_3sdp"
+        android:layout_weight="0.2"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_whatsapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteDistributor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <ImageButton
+        android:id="@+id/btnDeleteDistributor"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_3sdp"
+        android:layout_weight="0.2"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".core.ui.fragment.task.newtask.AddNewTaskFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp" >
+
+            <include
+                android:id="@+id/loadingLayout"
+                layout="@layout/loading_layout"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/nameDistributorLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TitleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/task_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameDistributorLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edTitleTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvDateTitle"
+                style="@style/TitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/received_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameDistributorLayout" />
+
+            <TextView
+                android:id="@+id/tvDayTitle"
+                style="@style/TitleTextView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/day"
+                app:layout_constraintEnd_toStartOf="@+id/tvMonthTitle"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvDateTitle"
+                app:layout_constraintTop_toBottomOf="@id/nameDistributorLayout" />
+
+            <EditText
+                android:id="@+id/edDay"
+                style="@style/DateEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                app:layout_constraintEnd_toEndOf="@+id/tvDayTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvDayTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvDayTitle" />
+
+            <TextView
+                android:id="@+id/tvMonthTitle"
+                style="@style/TitleTextView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/month"
+                app:layout_constraintEnd_toStartOf="@+id/tvYearTitle"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvDayTitle"
+                app:layout_constraintTop_toBottomOf="@id/nameDistributorLayout" />
+
+            <EditText
+                android:id="@+id/edMonth"
+                style="@style/DateEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tvMonthTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvMonthTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvMonthTitle" />
+
+            <TextView
+                android:id="@+id/tvYearTitle"
+                style="@style/TitleTextView"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/year"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvMonthTitle"
+                app:layout_constraintTop_toBottomOf="@id/nameDistributorLayout"
+
+                />
+
+            <EditText
+                android:id="@+id/edYear"
+                style="@style/DateEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tvYearTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvYearTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvYearTitle" />
+
+            <TextView
+                android:id="@+id/tvReceivedFromTitle"
+                style="@style/TitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/distributor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edDay" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/receivedFromLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/distributor_name"
+                app:layout_constraintEnd_toStartOf="@+id/btn_add_distributor"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvReceivedFromTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edDistributor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/btn_add_distributor"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="@+id/receivedFromLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/receivedFromLayout" />
+
+            <TextView
+                android:id="@+id/tvDelivererToTitle"
+                style="@style/TitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/specialist"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/receivedFromLayout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/delivererToLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_specialist"
+                app:layout_constraintEnd_toStartOf="@+id/btn_add_specialist"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDelivererToTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edSpecialist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:enabled="false" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <ImageButton
+                android:id="@+id/btn_add_specialist"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="0dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="@+id/delivererToLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/delivererToLayout" />
+            <TextView
+                android:id="@+id/tvPriceDetails"
+                style="@style/TitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_price"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_add_specialist" />
+
+            <include
+
+                android:id="@+id/details_price_task"
+                layout="@layout/price_task_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvPriceDetails"
+                android:layout_marginTop="@dimen/_5sdp"
+               />
+
+            <TextView
+                android:id="@+id/tvTaskStateTitle"
+                style="@style/TitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/task_state"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/details_price_task" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/taskStateLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_task_state"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTaskStateTitle">
+
+                <AutoCompleteTextView
+                    android:id="@+id/taskState"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveTask"
+        style="@style/AppCompatButton"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_weight="0.1"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/save_task" />
+
+</LinearLayout>

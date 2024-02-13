@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp"
+    >
+    <TextView
+        style="@style/TitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Filter Method"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radioByName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By Name"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            />
+        <RadioButton
+            android:id="@+id/radioBySpecialization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="By Specialization"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            />
+    </RadioGroup>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDismissDialog"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        style="@style/AppCompatButton"
+        android:text="Apply"
+        android:layout_gravity="center_horizontal"
+
+        />
+</LinearLayout>
